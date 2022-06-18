@@ -1,7 +1,12 @@
+import enum
 from typing import Optional
 
 from pydantic import BaseModel, EmailStr, Field
 
+
+class Tags(enum.Enum):
+    student: str = 'student'
+    
 
 class StudentSchema(BaseModel):
     fullname: str = Field(...)
